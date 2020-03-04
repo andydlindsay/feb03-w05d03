@@ -20,7 +20,6 @@ client.connect(() => {
   console.log('successfully connected to db');
 
   switch(verb) {
-
     case 'browse':
       client.query('SELECT * FROM movie_villains;')
         .then(data => {
@@ -47,20 +46,33 @@ client.connect(() => {
       sql = 'UPDATE movie_villains SET villain = $2 WHERE id = $1;';
       args = [id, villain];
       client.query(sql, args)
-        .then(data => {
+        .then(() => {
           console.log('villain updated successfully');
           client.end();
         });
       break;
 
     case 'add':
-      client.end();
+      const newVillain = process.argv.slice(2)[1];
+      const newMovie = process.argv.slice(2)[2];
+      sql = 'INSERT INTO movie_villains(villain, movie) VALUES($1, $2);';
+      args = [newVillain, newMovie];
+      client.query(sql, args)
+        .then(() => {
+          console.log('villain inserted!');
+          client.end();
+        });
       break;
       
     case 'delete':
-      client.end();
+      id = process.argv.slice(2)[1];
+      sql = 'DELETE FROM movie_villains WHERE id = $1;';
+      args = [id];
+      client.query(sql, args)
+        .then(() => {
+          console.log('villain defeated successfully');
+          client.end();
+        });
       break;
   }
-
-  
 });

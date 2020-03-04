@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css"/>
+  <title>All of our Villains</title>
+</head>
+<body>
+  <h1>All the Villains Mwahh ha ha</h1>
+  <% for (const villain of villains) { %>
+    <div class="villain-container">
+      <h2>Villain: <%= villain.villain %></h2>
+      <h2>Movie: <%= villain.movie %></h2>
+    </div>
+  <% } %>
+</body>
+</html>
