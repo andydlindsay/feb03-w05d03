@@ -1,12 +1,17 @@
 # W05D03 SQL from our Apps
 
 ### To Do
-- [ ] Create a database and query it using `psql` terminal
+- [ ] Create a database
 - [ ] Perform `BREAD` actions on database from command line
 - [ ] Perform `BREAD` actions on database from the browser
 
 
+client(db, host, user, password, port)
 
+client({
+  host: 5432,
+  
+})
 
 
 

@@ -1,0 +1,15 @@
+{
+  "name": "feb03-w05d03",
+  "version": "1.0.0",
+  "description": "### To Do - [ ] Create a database - [ ] Perform `BREAD` actions on database from command line - [ ] Perform `BREAD` actions on database from the browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^7.18.2"
+  }
+}
