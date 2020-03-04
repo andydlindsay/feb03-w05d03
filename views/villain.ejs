@@ -9,5 +9,13 @@
   <h1>Just One Villain (more than enough)</h1>
   <h2><%= villain %></h2>
   <h2>Movie: <%= movie %></h2>
+
+  <h3>Edit the Villain</h3>
+  <form method="POST" action="/villains/<%= id %>">
+    <label for="villain-name">New villain name:</label>
+    <input type="text" id="villain-name" name="villain" />
+    <br/>
+    <button type="submit">Edit!</button>
+  </form>
 </body>
 </html>
